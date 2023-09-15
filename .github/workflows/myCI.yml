@@ -64,6 +64,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
     # Check the Quality Gate status, so that this PR STOPS if the quality gate check fails
+    # https://github.com/marketplace/actions/sonarqube-quality-gate-check
     - name: SonarQube Quality Gate check
       id: sonarqube-quality-gate-check
       uses: sonarsource/sonarqube-quality-gate-action@master
